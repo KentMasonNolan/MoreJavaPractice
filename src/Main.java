@@ -1,21 +1,29 @@
+import javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        String world = new String("Hello World!");
-        System.out.println(world);
+        User user = new User();
+        user.firstName = "Kent";
+        user.lastName = "Nolan";
 
-        int x;
-        x = 5;
-        System.out.println(x);
+        System.out.println((user.getFullName()));
+
+
+        String password = "pants";
+        System.out.println("Guess the password: ");
 
         Scanner scanner = new Scanner(System.in);
-        String y = scanner.nextLine();
-        System.out.println(y);
-        int h = scanner.nextInt();
-        System.out.println(h);
-        int g = h + x;
-        System.out.println(g);
+        String guess = scanner.nextLine();
+
+        boolean passwordCheckTrue = password.toLowerCase().equals(guess.toLowerCase());
+        System.out.println(passwordCheckTrue);
+
+        if (passwordCheckTrue){
+            System.out.println("Good work. ");
+        } else {
+            System.out.println("You were wrong! ");
+        }
     }
 }
