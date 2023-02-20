@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        List<Integer> grades = Arrays.asList(5,6,2,0,4,5);
+        List<Integer> grades = Arrays.asList(5,4,2,0,4,5);
 //        grades.add(5);
 //        grades.add(5);
 //        grades.add(1, 7);
