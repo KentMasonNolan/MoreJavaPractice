@@ -6,15 +6,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        List<Integer> grades = Arrays.asList(5,4,2,0,4,5);
+
+
+
+
+//        List<Integer> grades = Arrays.asList(5,4,2,0,4,5);
 //        grades.add(5);
 //        grades.add(5);
 //        grades.add(1, 7);
-
-        grades.replaceAll(integer -> integer * 2);
-
-        System.out.println(Arrays.toString(grades.toArray()));
-        System.out.println(grades.size());
+//
+//        grades.replaceAll(integer -> integer * 2);
+//
+//        System.out.println(Arrays.toString(grades.toArray()));
+//        System.out.println(grades.size());
 
 //        System.out.println(grades.contains(5));
 //
