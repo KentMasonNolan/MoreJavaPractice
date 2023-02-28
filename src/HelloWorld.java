@@ -4,5 +4,10 @@ public class HelloWorld {
 
         System.out.println("Hello World");
 
+        double productCost = 16.2;
+        int nProducts = 3;
+        double totalCost = productCost * nProducts;
+        System.out.println(totalCost);
+
     }
 }
