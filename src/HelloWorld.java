@@ -1,13 +1,14 @@
+import java.util.Scanner;
+
 public class HelloWorld {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello World");
+        System.out.println("What is the message?");
 
-        double productCost = 16.2;
-        int nProducts = 3;
-        double totalCost = productCost * nProducts;
-        System.out.println(totalCost);
+        Scanner input = new Scanner(System.in);
+        String message = input.nextLine();
 
+        System.out.println("The message is \"" + message + "\".");
     }
 }

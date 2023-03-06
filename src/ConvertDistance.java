@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MilesToKM {
+public class ConvertDistance {
 
     public static void main(String[] args) {
 
