@@ -9,6 +9,6 @@ public class HelloW {
         Scanner input = new Scanner(System.in);
         String message = input.nextLine();
 
-        System.out.println("The message is " + message + ".");
+        System.out.println("The message is \"" + message + "\".");
     }
 }
