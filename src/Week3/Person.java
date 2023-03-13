@@ -24,6 +24,27 @@ public class Person {
         this.gender = "M";
     }
 
+    public boolean isStudent()
+    {
+        return student;
+    }
+
+    public int getAge()
+    {
+        return age;
+    }
+
+    public double computeDiscountPercent()
+            //this should be a double rather than an int because we want a percentage returned and can multiply any
+            //amount and get the true return
+    {
+        if (this.student && this.age >= 10 && this.age <= 20)
+        {
+            return 0.50;
+        }
+        else return 1;
+    }
+
     public String showData() {
         return "Person: \n" + "Age: " + age + "\n" + "Weight: " + weight + "\n" + "Is a student? " + student + "\n" + "Gender: " + gender;
     }
