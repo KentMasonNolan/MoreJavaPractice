@@ -46,7 +46,7 @@ public class Person {
     }
 
     public String showData() {
-        return "Person: \n" + "Age: " + age + "\n" + "Weight: " + weight + "\n" + "Is a student? " + student + "\n" + "Gender: " + gender;
+        return "Week2.Person: \n" + "Age: " + age + "\n" + "Weight: " + weight + "\n" + "Is a student? " + student + "\n" + "Gender: " + gender;
     }
 
     public static void main(String[] args) {

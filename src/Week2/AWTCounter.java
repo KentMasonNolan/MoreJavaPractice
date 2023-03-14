@@ -1,3 +1,5 @@
+package Week2;
+
 import java.awt.*;        // Using AWT container and component classes
 import java.awt.event.*;  // Using AWT event classes and listener interfaces
 
@@ -8,7 +10,7 @@ public class AWTCounter extends Frame {
     private Button btnCount;   // Declare a Button component
     private int count = 0;     // Counter's value
 
-    // Constructor to setup GUI components and event handlers
+    // Constructor to setup Week2.GUI components and event handlers
     public AWTCounter () {
         setLayout(new FlowLayout());
         // "super" Frame, which is a Container, sets its layout to FlowLayout to arrange
@@ -48,9 +50,9 @@ public class AWTCounter extends Frame {
 
     // The entry main() method
     public static void main(String[] args) {
-        // Invoke the constructor to setup the GUI, by allocating an instance
+        // Invoke the constructor to setup the Week2.GUI, by allocating an instance
         AWTCounter app = new AWTCounter();
-        // or simply "new AWTCounter();" for an anonymous instance
+        // or simply "new Week2.AWTCounter();" for an anonymous instance
     }
 
     // Define an inner class to handle the "Count" button-click
