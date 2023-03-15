@@ -32,17 +32,24 @@ public class Person {
         return age;
     }
 
-    public double computeDiscountPercent() {
+    public int computeDiscountPercent() {
         //this should be a double rather than an int because we want a percentage returned and can multiply any
         //amount and get the true return
 
-        double discount = 0.0;
+        int discount = 0;
 
         if (age > 65) {
-            discount = 1.0;
+            discount = 100;
         } else if (this.student && this.age >= 10 && this.age <= 20) {
-            discount = 0.5;
+            discount = 50;
         }
+        //check what discount a student aged 12 would receive
+        if (age %2 == 0){
+            discount = 25;
+        } else {
+            discount = 15;
+        }
+
         return discount;
     }
 
