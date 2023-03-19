@@ -26,7 +26,6 @@ public class CartesianPoint {
 
 
     public boolean onXAxis() {
-        // if y is 0 then point is on the x.
         if (y == 0) {
             return true;
         } else {
@@ -35,7 +34,6 @@ public class CartesianPoint {
     }
 
     public boolean onYAxis() {
-        // if x is 0 then point is on the y.
         if (x == 0) {
             return true;
         } else {
