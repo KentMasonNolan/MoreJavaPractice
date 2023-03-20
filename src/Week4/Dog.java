@@ -24,6 +24,6 @@ public class Dog {
             this.age = age;
         }
         public String toString() {
-            return "Name:" + " " + this.name + "," + " " + "Age:" + " " + this.age;
+            return "Name:" + " " + getName() + "," + " " + "Age:" + " " + getAge();
         }
     }

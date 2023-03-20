@@ -36,12 +36,6 @@ public class Box {
         return this.depth;
     }
 
-//    public boolean fits(double height, double width, double depth, Box box) {
-//        if (this.height < height && this.width < width && this.depth < depth) {
-//            return true;
-//        }
-//        return false;
-//    }
     public boolean fits(Box box) {
 
         String doesFit = String.valueOf((this.height < box.height && this.width < box.width && this.depth < box.depth));
@@ -49,13 +43,8 @@ public class Box {
         return (this.height < box.height && this.width < box.width && this.depth < box.depth);
     }
 
-
-
-
-
-
     public String toString(){
-        return "Height: " + this.height + "\nWidth: " + this.width + "\nDepth: " + this.depth;
+        return "Height: " + getHeight() + "\nWidth: " + getWidth() + "\nDepth: " + getDepth();
     }
 
     public static void main(String[] args){
