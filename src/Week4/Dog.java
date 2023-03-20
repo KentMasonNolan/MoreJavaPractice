@@ -7,6 +7,10 @@ public class Dog {
             this.name = name;
             this.age = age;
         }
+        public int inPersonYears(){
+            int humanYears = this.age * 7;
+            return humanYears;
+        }
         public String getName() {
             return name;
         }
@@ -20,6 +24,6 @@ public class Dog {
             this.age = age;
         }
         public String toString() {
-            return "Name:" + " " + this.name + "," + " " + "Age:" + " " + (7 * this.age);
+            return "Name:" + " " + this.name + "," + " " + "Age:" + " " + this.age;
         }
     }

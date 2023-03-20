@@ -5,13 +5,11 @@ public class Box {
     private double height;
     private double width;
     private double depth;
-    private boolean full = false;
 
     public Box(double height, double width, double depth) {
         this.height = height;
         this.width = width;
         this.depth = depth;
-        this.full = false;
     }
 
     public void setHeight(double height) {
@@ -26,10 +24,6 @@ public class Box {
         this.depth = depth;
     }
 
-    public void setFull(boolean full) {
-        this.full = full;
-    }
-
     public double getHeight() {
         return this.height;
     }
@@ -42,20 +36,26 @@ public class Box {
         return this.depth;
     }
 
-    public boolean getFull() {
-        return this.full;
+//    public boolean fits(double height, double width, double depth, Box box) {
+//        if (this.height < height && this.width < width && this.depth < depth) {
+//            return true;
+//        }
+//        return false;
+//    }
+    public boolean fits(Box box) {
+
+        String doesFit = String.valueOf((this.height < box.height && this.width < box.width && this.depth < box.depth));
+        System.out.println(doesFit);
+        return (this.height < box.height && this.width < box.width && this.depth < box.depth);
     }
 
-    public boolean fits(double height, double width, double depth) {
-        if (this.height < height && this.width < width && this.depth < depth) {
-            return true;
-        }
-        return false;
-    }
+
+
+
 
 
     public String toString(){
-        return "Height: " + this.height + "\nWidth: " + this.width + "\nDepth: " + this.depth + "\nIs it full?: " + this.full ;
+        return "Height: " + this.height + "\nWidth: " + this.width + "\nDepth: " + this.depth;
     }
 
     public static void main(String[] args){

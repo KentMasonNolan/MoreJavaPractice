@@ -10,8 +10,15 @@ public class Kennel {
         Dog d4 = new Dog("Kora", 5);
 
         System.out.println(d1);
+        System.out.println("The dog's age in human years is : " + d1.inPersonYears());
         System.out.println(d2);
+        System.out.println("The dog's age in human years is : " + d2.inPersonYears());
+
         System.out.println(d3);
+        System.out.println("The dog's age in human years is : " + d3.inPersonYears());
+
         System.out.println(d4);
+        System.out.println("The dog's age in human years is : " + d4.inPersonYears());
+
     }
 }
