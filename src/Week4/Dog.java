@@ -20,6 +20,6 @@ public class Dog {
             this.age = age;
         }
         public String toString() {
-            return "Name:" + " " + getName() + "," + " " + "Age:" + " " + (7 * getAge());
+            return "Name:" + " " + this.name + "," + " " + "Age:" + " " + (7 * this.age);
         }
     }
