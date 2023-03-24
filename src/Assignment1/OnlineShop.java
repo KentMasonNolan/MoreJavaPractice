@@ -2,12 +2,19 @@ package Assignment1;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class OnlineShop {
 
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
         System.out.println("Test");
+
+        Product p1 = new Product("USS Enterprise", "Starfleet", 500);
+        Product p2 = new Product("USS Voyager", "Starfleet", 500);
+        Product p3 = new Product("Borg Cube", "The Collective", 500);
+        Product p4 = new Product("USS something", "Not Starfleet", 500);
+        Product p5 = new Product("USS anything", "Not Starfleet", 500);
 
         do {
 
@@ -24,6 +31,10 @@ public class OnlineShop {
                 switch (menu) {
                     case 'a':
                         System.out.println("Case 1");
+                        System.out.println(p1);
+//                        list.stream().map(Object::toString).collect(Collectors.joining(","));
+
+
                         break;
                     case 'b':
                         System.out.println("Case 2");

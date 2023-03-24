@@ -15,4 +15,14 @@ public Product(String modelName, String manufacturerName, double retailPrice) {
         this.reliabilityRating = 0;
         this.numberOfConsumersRated = 0;
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + modelName
+                + ", " + manufacturerName
+                + ", $" + retailPrice
+                + ", Rating of: " + reliabilityRating
+                + " (based on " + numberOfConsumersRated + " customer ratings)";
+
+    }
 }
