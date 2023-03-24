@@ -90,7 +90,7 @@ public class BankAccount {
 
                 case 4:
                     System.out.println("\nHave a lovely day");
-                    System.exit(0);
+
                 default:
                     System.out.println("Please enter a valid Option!");
             }
