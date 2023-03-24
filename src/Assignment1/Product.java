@@ -25,4 +25,5 @@ public Product(String modelName, String manufacturerName, double retailPrice) {
                 + " (based on " + numberOfConsumersRated + " customer ratings)";
 
     }
+
 }

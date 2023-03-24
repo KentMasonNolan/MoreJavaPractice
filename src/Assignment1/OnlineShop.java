@@ -6,11 +6,15 @@ import java.util.stream.Collectors;
 
 public class OnlineShop {
 
+    private int nProduct = 0;
+    private Product[] inventory = new Product[5];
+
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
         System.out.println("Test");
 
         Product p1 = new Product("USS Enterprise", "Starfleet", 500);
+
         Product p2 = new Product("USS Voyager", "Starfleet", 500);
         Product p3 = new Product("Borg Cube", "The Collective", 500);
         Product p4 = new Product("USS something", "Not Starfleet", 500);
@@ -26,20 +30,23 @@ public class OnlineShop {
             try {
 
                 //Add error checking for an int being input rather than string
-                char menu = input.next().toLowerCase().charAt(0);
+                char menu = input.next().trim().toUpperCase().charAt(0);
 
                 switch (menu) {
-                    case 'a':
-                        System.out.println("Case 1");
-                        System.out.println(p1);
-//                        list.stream().map(Object::toString).collect(Collectors.joining(","));
+                    case 'A':
 
+                        System.out.println("1. " + p1);
+                        System.out.println("2. " + p2);
+                        System.out.println("3. " + p3);
+                        System.out.println("4. " + p4);
+                        System.out.println("5. " + p5);
 
                         break;
-                    case 'b':
-                        System.out.println("Case 2");
+                    case 'B':
+                        OnlineShop.rateProduct();
                         break;
-                    case 'c':
+
+                    case 'C':
                         System.out.println("Case 3");
                         System.exit(0);
                         break;
@@ -52,5 +59,17 @@ public class OnlineShop {
                 char menu = input.next().toLowerCase().charAt(0);
             }
         } while (true);
+    }
+
+    public void add(Product product) {
+        if (nProduct < 5) {
+            inventory[nProduct++] = product;
+        } else
+            System.out.println("Cannot add more than 5 products");
+    }
+
+    private static String rateProduct(){
+        System.out.println("Test");
+        return "Test";
     }
 }
