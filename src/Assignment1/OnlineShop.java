@@ -13,10 +13,10 @@ public class OnlineShop {
         Scanner input = new Scanner(System.in);
         System.out.println("Test");
 
-        Product p1 = new Product("USS Enterprise", "Starfleet", 500);
+        Product p1 = new Product("USS Enterprise", "Starfleet", 12400);
 
-        Product p2 = new Product("USS Voyager", "Starfleet", 500);
-        Product p3 = new Product("Borg Cube", "The Collective", 500);
+        Product p2 = new Product("USS Voyager", "Starfleet", 9800);
+        Product p3 = new Product("Borg Cube", "The Collective", 1337);
         Product p4 = new Product("USS something", "Not Starfleet", 500);
         Product p5 = new Product("USS anything", "Not Starfleet", 500);
 
@@ -47,7 +47,7 @@ public class OnlineShop {
                         break;
 
                     case 'C':
-                        System.out.println("Case 3");
+                        System.out.println("Have a lovely day");
                         System.exit(0);
                         break;
                     default:
@@ -68,8 +68,11 @@ public class OnlineShop {
             System.out.println("Cannot add more than 5 products");
     }
 
-    private static String rateProduct(){
-        System.out.println("Test");
-        return "Test";
+    public static String rateProduct(){
+        System.out.println("Please select a product to rate (1-5)");
+        Scanner input = new Scanner(System.in);
+        int selection = input.nextInt();
+        selection = selection * 3;
+        return String.valueOf(selection);
     }
 }
