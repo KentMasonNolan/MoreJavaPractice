@@ -4,7 +4,7 @@ public class Product {
     String modelName;
     String manufacturerName;
     double retailPrice;
-    double reliabilityRating;
+    static double reliabilityRating;
     int numberOfConsumersRated;
 
 
@@ -14,6 +14,15 @@ public Product(String modelName, String manufacturerName, double retailPrice) {
         this.retailPrice =retailPrice;
         this.reliabilityRating = 0;
         this.numberOfConsumersRated = 0;
+    }
+
+    public static double getReliabilityRating(int selection) {
+
+        return reliabilityRating;
+    }
+
+    public void setReliabilityRating(double reliabilityRating) {
+        this.reliabilityRating = reliabilityRating;
     }
 
     @Override

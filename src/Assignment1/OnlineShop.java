@@ -72,7 +72,7 @@ public class OnlineShop {
         System.out.println("Please select a product to rate (1-5)");
         Scanner input = new Scanner(System.in);
         int selection = input.nextInt();
-        selection = selection * 3;
-        return String.valueOf(selection);
+        Product.getReliabilityRating(selection);
+        return "a";
     }
 }
