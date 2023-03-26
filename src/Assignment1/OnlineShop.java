@@ -6,19 +6,23 @@ import java.util.stream.Collectors;
 
 public class OnlineShop {
 
-    private int nProduct = 0;
-    private Product[] inventory = new Product[5];
+    private static int nProduct = 0;
+    private static Product[] inventory = new Product[5];
 
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
         System.out.println("Test");
 
         Product p1 = new Product("USS Enterprise", "Starfleet", 12400);
-
+        OnlineShop.add(p1);
         Product p2 = new Product("USS Voyager", "Starfleet", 9800);
+        OnlineShop.add(p2);
         Product p3 = new Product("Borg Cube", "The Collective", 1337);
+        OnlineShop.add(p3);
         Product p4 = new Product("USS something", "Not Starfleet", 500);
+        OnlineShop.add(p4);
         Product p5 = new Product("USS anything", "Not Starfleet", 500);
+        OnlineShop.add(p5);
 
         do {
 
@@ -35,11 +39,15 @@ public class OnlineShop {
                 switch (menu) {
                     case 'A':
 
-                        System.out.println("1. " + p1);
-                        System.out.println("2. " + p2);
-                        System.out.println("3. " + p3);
-                        System.out.println("4. " + p4);
-                        System.out.println("5. " + p5);
+                        for (int i=0; i<inventory.length; i++){
+                            System.out.println(inventory[i]);
+                        }
+
+//                        System.out.println("1. " + p1);
+//                        System.out.println("2. " + p2);
+//                        System.out.println("3. " + p3);
+//                        System.out.println("4. " + p4);
+//                        System.out.println("5. " + p5);
 
                         break;
                     case 'B':
@@ -61,7 +69,7 @@ public class OnlineShop {
         } while (true);
     }
 
-    public void add(Product product) {
+    public static void add(Product product) {
         if (nProduct < 5) {
             inventory[nProduct++] = product;
         } else
