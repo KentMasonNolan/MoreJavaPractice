@@ -12,16 +12,16 @@ public Product(String modelName, String manufacturerName, double retailPrice) {
         this.modelName = modelName;
         this.manufacturerName = manufacturerName;
         this.retailPrice =retailPrice;
-        reliabilityRating = 0;
+        this.reliabilityRating = 0;
         this.numberOfConsumersRated = 0;
     }
 
 
-    public void rateReliability(double newRating) {
+    public static void rateReliability(Product product, double newRating) {
         if (newRating >= 0.0 && newRating <= 5.0) {
-            reliabilityRating = (reliabilityRating * numberOfConsumersRated + newRating) / (++numberOfConsumersRated);
+            product.reliabilityRating = (product.reliabilityRating * product.numberOfConsumersRated + newRating) / (++product.numberOfConsumersRated);
         } else {
-            System.err.println("Invalid rating value. Please retry.");
+            System.out.println("Invalid rating value. Please retry.");
         }
     }
 
