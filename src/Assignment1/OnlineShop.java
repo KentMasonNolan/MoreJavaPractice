@@ -19,9 +19,9 @@ public class OnlineShop {
         OnlineShop.add(p2);
         Product p3 = new Product("Borg Cube", "The Collective", 1337);
         OnlineShop.add(p3);
-        Product p4 = new Product("USS something", "Not Starfleet", 500);
+        Product p4 = new Product("USS Defiant", "Starfleet", 15400);
         OnlineShop.add(p4);
-        Product p5 = new Product("USS anything", "Not Starfleet", 500);
+        Product p5 = new Product("Vor'cha-class attack cruiser", "Klingon Empire", 8000);
         OnlineShop.add(p5);
 
         do {
@@ -42,12 +42,6 @@ public class OnlineShop {
                         for (int i=0; i<inventory.length; i++){
                             System.out.println(inventory[i]);
                         }
-
-//                        System.out.println("1. " + p1);
-//                        System.out.println("2. " + p2);
-//                        System.out.println("3. " + p3);
-//                        System.out.println("4. " + p4);
-//                        System.out.println("5. " + p5);
 
                         break;
                     case 'B':
@@ -72,6 +66,7 @@ public class OnlineShop {
     public static void add(Product product) {
         if (nProduct < 5) {
             inventory[nProduct++] = product;
+//            System.out.println(inventory[nProduct]);
         } else
             System.out.println("Cannot add more than 5 products");
     }
@@ -80,7 +75,7 @@ public class OnlineShop {
         System.out.println("Please select a product to rate (1-5)");
         Scanner input = new Scanner(System.in);
         int selection = input.nextInt();
-        Product.getReliabilityRating(selection);
+//        Product.getReliabilityRating(selection);
         return "a";
     }
 }
