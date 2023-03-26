@@ -2,7 +2,6 @@ package Assignment1;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class OnlineShop {
 
@@ -40,7 +39,8 @@ public class OnlineShop {
                     case 'A':
 
                         for (int i=0; i<inventory.length; i++){
-                            System.out.println(inventory[i]);
+//                            System.out.print(i+1 + ". ");
+                            System.out.println(i+1 + ". " + inventory[i]);
                         }
 
                         break;
@@ -71,11 +71,29 @@ public class OnlineShop {
             System.out.println("Cannot add more than 5 products");
     }
 
-    public static String rateProduct(){
-        System.out.println("Please select a product to rate (1-5)");
+    public static void rateProduct(){
+
+        for (int i=0; i<inventory.length; i++){
+            System.out.println(i+1 + ". " + inventory[i]);
+        }
+
+        System.out.println("\nPlease select a product to rate (1-5)");
         Scanner input = new Scanner(System.in);
         int selection = input.nextInt();
-//        Product.getReliabilityRating(selection);
-        return "a";
+        OnlineShop.getProduct(selection);
+        System.out.println(selection);
+
+        System.out.println("Please enter a rating between 0.0 to 5.0");
+        double productRating = input.nextDouble();
+        System.out.println(productRating);
+    }
+
+    public static Product getProduct(int selection){
+        if (selection >= 1 && selection <= 5){
+            return inventory[selection-1];
+        } else {
+            System.out.println("Please pick a product between 1-5");
+            return null;
+        }
     }
 }

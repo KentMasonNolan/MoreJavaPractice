@@ -17,7 +17,13 @@ public Product(String modelName, String manufacturerName, double retailPrice) {
     }
 
 
-
+    public void rateReliability(double newRating) {
+        if (newRating >= 0.0 && newRating <= 5.0) {
+            reliabilityRating = (reliabilityRating * numberOfConsumersRated + newRating) / (++numberOfConsumersRated);
+        } else {
+            System.err.println("Invalid rating value. Please retry.");
+        }
+    }
 
 
     @Override
