@@ -1,10 +1,10 @@
 package Assignment1;
 
 public class Product {
-     String modelName;
-     String manufacturerName;
+    String modelName;
+    String manufacturerName;
     double retailPrice;
-    static double reliabilityRating;
+    double reliabilityRating;
     int numberOfConsumersRated;
 
 
