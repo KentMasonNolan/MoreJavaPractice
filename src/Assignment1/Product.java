@@ -1,18 +1,18 @@
 package Assignment1;
 
 public class Product {
-    String modelName;
-    String manufacturerName;
-    double retailPrice;
+    static String modelName;
+    static String manufacturerName;
+    static double retailPrice;
     static double reliabilityRating;
     int numberOfConsumersRated;
 
 
 public Product(String modelName, String manufacturerName, double retailPrice) {
-        this.modelName = modelName;
-        this.manufacturerName = manufacturerName;
-        this.retailPrice =retailPrice;
-        this.reliabilityRating = 0;
+        Product.modelName = modelName;
+        Product.manufacturerName = manufacturerName;
+        Product.retailPrice =retailPrice;
+        reliabilityRating = 0;
         this.numberOfConsumersRated = 0;
     }
 
@@ -20,6 +20,7 @@ public Product(String modelName, String manufacturerName, double retailPrice) {
 
         return reliabilityRating;
     }
+
 
     public void setReliabilityRating(double reliabilityRating) {
         this.reliabilityRating = reliabilityRating;
