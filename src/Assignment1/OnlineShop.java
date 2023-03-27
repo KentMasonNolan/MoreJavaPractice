@@ -66,7 +66,6 @@ public class OnlineShop {
     public static void add(Product product) {
         if (nProduct < 5) {
             inventory[nProduct++] = product;
-//            System.out.println(inventory[nProduct]);
         } else
             System.out.println("Cannot add more than 5 products");
     }
