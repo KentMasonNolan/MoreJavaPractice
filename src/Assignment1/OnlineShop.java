@@ -81,13 +81,13 @@ public class OnlineShop {
         Scanner input = new Scanner(System.in);
         int selection = input.nextInt();
         OnlineShop.getProduct(selection);
-        System.out.println(inventory[selection]);
+        System.out.println(inventory[selection-1]);
 
         System.out.println("Please enter a rating between 0.0 to 5.0");
         double productRating = input.nextDouble();
         System.out.println(productRating);
-        Product.rateReliability(inventory[selection], productRating);
-        System.out.println(inventory[selection]);
+        Product.rateReliability(inventory[selection-1], productRating);
+//        System.out.println(inventory[selection]);
     }
 
     public static Product getProduct(int selection){
