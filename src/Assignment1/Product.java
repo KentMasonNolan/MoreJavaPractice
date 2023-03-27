@@ -1,11 +1,11 @@
 package Assignment1;
 
 public class Product {
-    String modelName;
-    String manufacturerName;
-    double retailPrice;
-    double reliabilityRating;
-    int numberOfConsumersRated;
+    private String modelName;
+    private String manufacturerName;
+    private double retailPrice;
+    private double reliabilityRating;
+    private int numberOfConsumersRated;
 
 
 public Product(String modelName, String manufacturerName, double retailPrice) {
@@ -63,9 +63,9 @@ public Product(String modelName, String manufacturerName) {
         this.numberOfConsumersRated = numberOfConsumersRated;
     }
 
-    public static void rateReliability(Product product, double newRating) {
+    public void rateReliability(double newRating) {
         if (newRating >= 0.0 && newRating <= 5.0) {
-            product.reliabilityRating = (product.reliabilityRating * product.numberOfConsumersRated + newRating) / (++product.numberOfConsumersRated);
+            reliabilityRating = (reliabilityRating * numberOfConsumersRated + newRating) / (++numberOfConsumersRated);
         } else {
             System.out.println("Invalid rating value. Please retry.");
         }
