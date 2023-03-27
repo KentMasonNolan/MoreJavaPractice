@@ -1,3 +1,17 @@
+/***
+ *
+
+ * Student Name: Kent Nolan
+
+ * Student ID: 20119784
+
+ * Course Code: COMP503 - Programing 2
+
+ * Assessment Item: Assignment: Individual Programming Assignment Part A
+
+ *
+ **/
+
 package Assignment1;
 
 import java.util.InputMismatchException;
@@ -23,7 +37,10 @@ public class OnlineShop {
         return s;
     }
 
+    //Function for adding products to array
     public void add(Product product) {
+
+        //Checks if array is not full, sets the position of the object in the array and then increments
         if (nProduct < 5) {
             inventory[nProduct++] = product;
         } else
@@ -32,6 +49,7 @@ public class OnlineShop {
 
 
 
+    //accepts the selection from rateProduct and returns the correct object in the array
     public static Product getProduct(int selection){
         if (selection >= 1 && selection <= 5){
             return inventory[selection-1];

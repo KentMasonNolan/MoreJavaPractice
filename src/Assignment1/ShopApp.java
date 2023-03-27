@@ -1,3 +1,17 @@
+/***
+ *
+
+ * Student Name: Kent Nolan
+
+ * Student ID: 20119784
+
+ * Course Code: COMP503 - Programing 2
+
+ * Assessment Item: Assignment: Individual Programming Assignment Part A
+
+ *
+ **/
+
 package Assignment1;
 
 import java.util.InputMismatchException;
@@ -12,7 +26,6 @@ public class ShopApp {
 
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
-        System.out.println("Test");
 
         Product p1 = new Product("USS Enterprise", "Starfleet", 12400);
         onlineShop.add(p1);
@@ -27,7 +40,7 @@ public class ShopApp {
 
         do {
 
-            System.out.println("\nPlease pick one of the following");
+            System.out.println("Please pick one of the following");
             System.out.println("A. Display inventory");
             System.out.println("B. Rate Product");
             System.out.println("C. Exit");
@@ -40,10 +53,12 @@ public class ShopApp {
                 switch (menu) {
                     case 'A':
 
+                        System.out.println("Product List: ");
                         System.out.println(onlineShop.toString());
 
                         break;
                     case 'B':
+                        System.out.println("Product List: ");
                         System.out.println(onlineShop.toString());
                         ShopApp.rateProduct();
                         break;
@@ -53,11 +68,11 @@ public class ShopApp {
                         System.exit(0);
                         break;
                     default:
-                        System.out.println("PLease pick a real option, you dick");
+                        System.out.println("Please pick a valid option");
                         throw new Exception("Illegal Operation" + menu);
                 }
             } catch (InputMismatchException error) {
-                System.out.println("Don't be a dickhead");
+                System.out.println("Please pick a valid option");
                 char menu = input.next().toLowerCase().charAt(0);
             }
         } while (true);
@@ -65,19 +80,24 @@ public class ShopApp {
 
     public static void rateProduct(){
 
-
         System.out.println("\nPlease select a product to rate (1-5)");
+
+        // get value for product selection
         Scanner input = new Scanner(System.in);
         int selection = input.nextInt();
+
+        // acepts product selection and returns product
         OnlineShop.getProduct(selection);
         System.out.println(OnlineShop.getProduct(selection));
 
-        System.out.println("Please enter a rating between 0.0 to 5.0");
+        // gets the rating for the selected product
+        System.out.println("\nPlease enter a rating between 0.0 to 5.0");
         double productRating = input.nextDouble();
-        onlineShop.getProduct(selection).rateReliability(productRating);
-        System.out.println(productRating);
 
-//        Product.rateReliability(inventory[selection-1], productRating);
-//        System.out.println(inventory[selection]);
+        // sets the rating for the selected product
+        onlineShop.getProduct(selection).rateReliability(productRating);
+
+
+
     }
 }
