@@ -23,6 +23,45 @@ public Product(String modelName, String manufacturerName) {
         this.numberOfConsumersRated = 0;
     }
 
+    public String getModelName() {
+        return modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    public String getManufacturerName() {
+        return manufacturerName;
+    }
+
+    public void setManufacturerName(String manufacturerName) {
+        this.manufacturerName = manufacturerName;
+    }
+
+    public double getRetailPrice() {
+        return retailPrice;
+    }
+
+    public void setRetailPrice(double retailPrice) {
+        this.retailPrice = retailPrice;
+    }
+
+    public double getReliabilityRating() {
+        return reliabilityRating;
+    }
+
+    public void setReliabilityRating(double reliabilityRating) {
+        this.reliabilityRating = reliabilityRating;
+    }
+
+    public int getNumberOfConsumersRated() {
+        return numberOfConsumersRated;
+    }
+
+    public void setNumberOfConsumersRated(int numberOfConsumersRated) {
+        this.numberOfConsumersRated = numberOfConsumersRated;
+    }
 
     public static void rateReliability(Product product, double newRating) {
         if (newRating >= 0.0 && newRating <= 5.0) {
