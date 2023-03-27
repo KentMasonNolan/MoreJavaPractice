@@ -15,6 +15,13 @@ public Product(String modelName, String manufacturerName, double retailPrice) {
         this.reliabilityRating = 0;
         this.numberOfConsumersRated = 0;
     }
+public Product(String modelName, String manufacturerName) {
+        this.modelName = modelName;
+        this.manufacturerName = manufacturerName;
+        this.retailPrice =0;
+        this.reliabilityRating = 0;
+        this.numberOfConsumersRated = 0;
+    }
 
 
     public static void rateReliability(Product product, double newRating) {
