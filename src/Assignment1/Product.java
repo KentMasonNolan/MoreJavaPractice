@@ -1,21 +1,37 @@
+/***
+ *
+
+ * Student Name: Kent Nolan
+
+ * Student ID: 20119784
+
+ * Course Code: COMP503 - Programing 2
+
+ * Assessment Item: Assignment: Individual Programming Assignment Part A
+
+ *
+ **/
+
 package Assignment1;
 
 public class Product {
-    String modelName;
-    String manufacturerName;
-    double retailPrice;
-    double reliabilityRating;
-    int numberOfConsumersRated;
+    private String modelName;
+    private String manufacturerName;
+    private double retailPrice;
+    private double reliabilityRating;
+    private int numberOfConsumersRated;
 
 
-public Product(String modelName, String manufacturerName, double retailPrice) {
+    // Three input constructor
+    public Product(String modelName, String manufacturerName, double retailPrice) {
         this.modelName = modelName;
         this.manufacturerName = manufacturerName;
         this.retailPrice =retailPrice;
         this.reliabilityRating = 0;
         this.numberOfConsumersRated = 0;
     }
-public Product(String modelName, String manufacturerName) {
+    // Two input constructor
+    public Product(String modelName, String manufacturerName) {
         this.modelName = modelName;
         this.manufacturerName = manufacturerName;
         this.retailPrice =0;
@@ -23,51 +39,46 @@ public Product(String modelName, String manufacturerName) {
         this.numberOfConsumersRated = 0;
     }
 
+    //Returns model name
     public String getModelName() {
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
+    //Returns manufacturer name
     public String getManufacturerName() {
         return manufacturerName;
     }
 
-    public void setManufacturerName(String manufacturerName) {
-        this.manufacturerName = manufacturerName;
-    }
-
+    //Returns retail price
     public double getRetailPrice() {
         return retailPrice;
     }
 
-    public void setRetailPrice(double retailPrice) {
-        this.retailPrice = retailPrice;
-    }
-
+    //Returns reliability rating
     public double getReliabilityRating() {
         return reliabilityRating;
     }
 
-    public void setReliabilityRating(double reliabilityRating) {
-        this.reliabilityRating = reliabilityRating;
+    // Sets the retail price
+    public void setRetailPrice(double retailPrice) {
+        this.retailPrice = retailPrice;
     }
 
+    //Returns total number of consumers rated
     public int getNumberOfConsumersRated() {
         return numberOfConsumersRated;
     }
 
-    public void setNumberOfConsumersRated(int numberOfConsumersRated) {
-        this.numberOfConsumersRated = numberOfConsumersRated;
-    }
-
-    public static void rateReliability(Product product, double newRating) {
+    //Function for rating the reliability
+    public void rateReliability(double newRating) {
+        //Validates the rating is between 1 & 5
         if (newRating >= 0.0 && newRating <= 5.0) {
-            product.reliabilityRating = (product.reliabilityRating * product.numberOfConsumersRated + newRating) / (++product.numberOfConsumersRated);
+
+            //Sets new rating based on standard formula and increments total number of consumers rated
+            reliabilityRating = (reliabilityRating * numberOfConsumersRated + newRating) / (++numberOfConsumersRated);
+            System.out.println("Thank you. The product has been updated.\n");
         } else {
-            System.out.println("Invalid rating value. Please retry.");
+            System.out.println("Please pick a valid rating option & try again.\n");
         }
     }
 
