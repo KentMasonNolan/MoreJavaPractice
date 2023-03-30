@@ -1,4 +1,18 @@
 package Week5;
+/***
+ *
+
+ * Student Name: Kent Nolan
+
+ * Student ID: 20119784
+
+ * Course Code: COMP503 - Programing 2
+
+ * Assessment Item: Week 5 lab
+
+ *
+ **/
+
 
 public class NumberListTest {
 

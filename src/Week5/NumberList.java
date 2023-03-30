@@ -1,3 +1,17 @@
+/***
+ *
+
+ * Student Name: Kent Nolan
+
+ * Student ID: 20119784
+
+ * Course Code: COMP503 - Programing 2
+
+ * Assessment Item: Week 5 lab
+
+ *
+ **/
+
 package Week5;
 
 import java.util.Random;
