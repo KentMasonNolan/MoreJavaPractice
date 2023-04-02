@@ -37,6 +37,8 @@ public class OnlineShop {
         return s;
     }
 
+
+
     //Function for adding products to array
     public void add(Product product) {
 
