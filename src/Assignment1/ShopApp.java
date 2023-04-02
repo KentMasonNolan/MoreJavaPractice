@@ -19,7 +19,6 @@ import java.util.Scanner;
 
 public class ShopApp {
 
-    private static int nProduct = 0;
     private Product[] inventory = new Product[5];
 
     private static OnlineShop onlineShop = new OnlineShop();
