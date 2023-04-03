@@ -44,13 +44,35 @@ public class StringCompute {
     public void removeChar(char ch) {
 
         StringBuilder newStrg = new StringBuilder(str);
-
         for (int i = 0; i < str.length() - 1; i++) {
             if (str.charAt(i) == ch) {
                 newStrg.deleteCharAt(i);
             }
         }
         System.out.println(newStrg);
+    }
+
+    boolean isPalindrome() {
+        int n = str.length();
+        for (int i = 0; i < (n/2); ++i) {
+            if (str.charAt(i) != str.charAt(n - i - 1)) {
+                System.out.println("False");
+                return false;
+            }
+        }
+        System.out.println("True");
+        return true;
+    }
+
+    public void duplicate(String s){
+        if (s == str){
+            String strTemp = str.toUpperCase();
+            s = strTemp+strTemp;
+            setStr(s);
+        }
+        else {
+            setStr(s);
+        }
     }
 
 
@@ -75,6 +97,8 @@ public class StringCompute {
         ch = input.next().charAt(0);
         s1.removeChar(ch);
 
+        System.out.println("Is your string a palindrome?");
+        s1.isPalindrome();
     }
 
 
