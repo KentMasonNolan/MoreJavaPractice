@@ -1,6 +1,8 @@
 package Week6;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class SimpleDate {
@@ -9,10 +11,8 @@ public class SimpleDate {
     private int month;
     private int year;
 
-    SimpleDate(){
-        this.day = 0;
-        this.month = 0;
-        this.year = 0;
+    SimpleDate(int day, int month, int year){
+        setDate(day,month,year);
     }
 
     public int getDay() {
@@ -70,10 +70,17 @@ public class SimpleDate {
         System.out.println("Please set current day ");
         int year = input.nextInt();
 
-        SimpleDate d1 = new SimpleDate();
+        SimpleDate d1 = new SimpleDate(day, month, year);
+        System.out.println(d1);
 
-        d1.setDate(day,month,year);
+    }
 
+    @Override
+    public String toString() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDateTime now = LocalDate.of(year,month,day).atStartOfDay();
+
+        return dtf.format(now);
     }
 
     private void setDate(int day, int month, int year) {
