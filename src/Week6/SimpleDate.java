@@ -1,6 +1,7 @@
 package Week6;
 
 import java.time.LocalDateTime;
+import java.util.Scanner;
 
 public class SimpleDate {
 
@@ -8,10 +9,10 @@ public class SimpleDate {
     private int month;
     private int year;
 
-    SimpleDate(int day, int month, int year){
-        this.day = day;
-        this.month = month;
-        this.year = year;
+    SimpleDate(){
+        this.day = 0;
+        this.month = 0;
+        this.year = 0;
     }
 
     public int getDay() {
@@ -55,5 +56,29 @@ public class SimpleDate {
             System.out.println("Invalid year sent to setYear method");
             this.year = 2023;
         }
+    }
+
+    public static void main(String[] args) {
+
+
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please set current day ");
+        int day = input.nextInt();
+        System.out.println("Please set current month ");
+        int month = input.nextInt();
+        System.out.println("Please set current day ");
+        int year = input.nextInt();
+
+        SimpleDate d1 = new SimpleDate();
+
+        d1.setDate(day,month,year);
+
+    }
+
+    private void setDate(int day, int month, int year) {
+        setDay(day);
+        setMonth(month);
+        setYear(year);
     }
 }
