@@ -1,5 +1,6 @@
 package Week6;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class StringCompute {
@@ -65,7 +66,7 @@ public class StringCompute {
     }
 
     public void duplicate(String s){
-        if (s == str){
+        if (Objects.equals(s, str)){
             String strTemp = str.toUpperCase();
             s = strTemp+strTemp;
             setStr(s);
