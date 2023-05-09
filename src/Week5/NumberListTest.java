@@ -1,24 +1,38 @@
 package Week5;
+/***
+ *
+
+ * Student Name: Kent Nolan
+
+ * Student ID: 20119784
+
+ * Course Code: COMP503 - Programing 2
+
+ * Assessment Item: Week 5 lab
+
+ *
+ **/
+
 
 public class NumberListTest {
 
     public static void main(String[] args) {
 
-        NumberList array1 = new NumberList(); //non-parameterized constructor is called
+        NumberList array1 = new NumberList();
 
-        System.out.println("Details of the Array created by object array1 : \n");
+        System.out.println("Details of the array created by object array1 : \n");
 
         System.out.println("Size : "+ array1.size());
 
-        System.out.println("String representation of array: "+ array1.toString());
+        System.out.println("String of array: "+ array1.toString());
 
         NumberList array2 = new NumberList(10); //parameterized constructor is called
 
-        System.out.println("\nDetails of the Array created by second object obj2 : \n");
+        System.out.println("\nDetails of the array created by second object obj2 : \n");
 
         System.out.println("Size : "+ array2.size());
 
-        System.out.println("String representation of array: "+ array2.toString());
+        System.out.println("String of array: "+ array2.toString());
 
         System.out.println("Updating value at index 2");
 
@@ -42,7 +56,7 @@ public class NumberListTest {
 
         System.out.println("Updated array: "+ array2.toString());
 
-        System.out.println("Scalling each number of the array by factor 2: ");
+        System.out.println("Scaling each number of the array by factor 2: ");
 
         array2.scale(2);
 
