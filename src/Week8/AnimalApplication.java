@@ -26,11 +26,23 @@ public class AnimalApplication extends Animal{
                     if (animalCount < animals.length){
                         animals[animalCount] = new Cat();
                         animalCount++;
+                        System.out.println("Cat created");
+                        break;
                     }
+
+            case 2:
+                if (animalCount < animals.length){
+                    animals[animalCount] = new Dog();
+                    animalCount++;
+                    System.out.println("Dog created");
+                    break;
+                }
+            default:
+                System.out.println("Please choose a valid option");
+                break;
             }
 
         }
-
 
     }
 
