@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class AnimalApplication extends Animal{
 
-    Animal[] animals = new Animal[4];
-    int animalCount = 0;
+    static Animal[] animals = new Animal[4];
+    static int animalCount = 0;
 
     public static void main(String[] args) {
 
@@ -13,9 +13,21 @@ public class AnimalApplication extends Animal{
 
         System.out.println("Welcome to the Pet Shop");
 
-        while (true){
+        while (animalCount<4){
 
+            System.out.println("Please choose from the following options");
+            System.out.println("1. Cat");
+            System.out.println("2. Dog");
 
+            int userChoice = input.nextInt();
+
+            switch (userChoice){
+                case 1:
+                    if (animalCount < animals.length){
+                        animals[animalCount] = new Cat();
+                        animalCount++;
+                    }
+            }
 
         }
 
