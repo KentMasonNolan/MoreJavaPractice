@@ -42,6 +42,28 @@ public class AnimalApplication extends Animal{
 
         }
 
+
+        while (true){
+            System.out.println("Select an animal to feed by entering a number within the range: 0 to 4");
+
+            for (int i = 0; i < animalCount; i++) {
+                System.out.println((i +1) +": " + animals[i]);
+            }
+            System.out.println("Or 0 to exit.");
+
+            int userChoice = input.nextInt();
+
+            if (userChoice>0 && userChoice<=animalCount){
+                animals[userChoice-1].feed();
+            } else if (userChoice==0) {
+                System.exit(0);
+            }
+            else {
+                System.out.println("Please choose a valid option.");
+            }
+
+        }
+
     }
 
 }
