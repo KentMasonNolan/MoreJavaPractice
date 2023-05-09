@@ -15,9 +15,9 @@ public class AnimalApplication extends Animal{
 
         while (animalCount<4){
 
-            System.out.println("Please choose from the following options");
+            System.out.println("\nPlease choose from the following options");
             System.out.println("1. Cat");
-            System.out.println("2. Dog");
+            System.out.println("2. Dog\n");
 
             int userChoice = input.nextInt();
 
@@ -26,7 +26,6 @@ public class AnimalApplication extends Animal{
                     if (animalCount < animals.length){
                         animals[animalCount] = new Cat();
                         animalCount++;
-                        System.out.println("Cat created");
                         break;
                     }
 
@@ -34,7 +33,6 @@ public class AnimalApplication extends Animal{
                 if (animalCount < animals.length){
                     animals[animalCount] = new Dog();
                     animalCount++;
-                    System.out.println("Dog created");
                     break;
                 }
             default:
