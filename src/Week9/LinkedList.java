@@ -67,11 +67,10 @@ public class LinkedList
     //---------------------------------------------
     public static void main(String[] args)
     {
-        LinkedList list = new LinkedList(4);
-        list.add(1);
-        list.add(7);
-        list.add(100);
-        System.out.println(list);
-        System.out.println("The list: "+list+" has "+list.length()+" elements.");
+        LinkedList list = new LinkedList(16);
+        list.add(67);
+        list.add(23);
+        list.add(10);
+        System.out.println("Top ["+list+"]");
     }
 }
