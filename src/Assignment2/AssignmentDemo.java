@@ -11,11 +11,11 @@ public class AssignmentDemo{
     {
 
         System.out.println("----------------------------------------");
-        ArrayList<DigitalContent> matches = streaming.match(query);
+        ArrayList matches = streaming.match(query);
         System.out.println("Matching query: \""+query+"\"");
         streaming.match("Orson");
         Collections.sort(matches);
-        for(DigitalContent dc :matches) {
+        for(Object dc :matches) {
             System.out.println(dc);
         }
         System.out.println("Total of: "+matches.size()+" matches");
