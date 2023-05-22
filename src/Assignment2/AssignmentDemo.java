@@ -25,12 +25,15 @@ public class AssignmentDemo {
         System.out.println("Welcome to the Streaming Service");
 
         // Creating film objects
-        Film bigSleep = new Film("The Big Sleep", "Warner Bros.", "1946", "Humphrey Bogart, Lauren Bacall");
-        Film keyLargo = new Film("Key Largo", "Warner Bros.", "1948", "Humphrey Bogart, Lauren Bacall");
-        Film thirdMan = new Film("The Third Man", "London Film Productions", "1949", "Orson Welles, Joseph Cotten");
-        Film citizenKane = new Film("Citizen Kane", "RKO Radio Pictures", "1941", "Orson Welles, Joseph Cotten");
-        Film doubleIndemnity = new Film("Double Indemnity", "Paramount Pictures", "1944", "Fred MacMurray, Barbara Stanwyck");
-        Film sunsetBlvd = new Film("Sunset Blvd.", "Paramount Pictures", "1950", "William Holden, Gloria Swanson");
+
+        Film theWrathofKhan = new Film("Star Trek II: The Wrath of Khan", "Paramount Pictures", "1982", "William Shatner, Leonard Nimoy");
+        Film theSearchforSpock = new Film("Star Trek III: The Search for Spock", "Paramount Pictures", "1984", "William Shatner, Leonard Nimoy");
+        Film generations = new Film("Star Trek Generations", "Paramount Pictures", "1994", "Patrick Stewart, William Shatner");
+        Film firstContact = new Film("Star Trek: First Contact", "Paramount Pictures", "1996", "Patrick Stewart, Jonathan Frakes");
+        Film insurrection = new Film("Star Trek: Insurrection", "Paramount Pictures", "1998", "Patrick Stewart, Jonathan Frakes");
+        Film intoDarkness = new Film("Star Trek Into Darkness", "Paramount Pictures", "2013", "Chris Pine, Zachary Quinto");
+
+
 
         // Creating music objects
         Music bruce = new Music("Born in the USA", "Bruce Springsteen", "1984", "Bruce Springsteen");
@@ -42,12 +45,12 @@ public class AssignmentDemo {
         StreamingService streaming = new StreamingService();
 
         // Adding films and music to the streaming service
-        streaming.add(bigSleep);
-        streaming.add(keyLargo);
-        streaming.add(thirdMan);
-        streaming.add(citizenKane);
-        streaming.add(doubleIndemnity);
-        streaming.add(sunsetBlvd);
+        streaming.add(theWrathofKhan);
+        streaming.add(theSearchforSpock);
+        streaming.add(generations);
+        streaming.add(firstContact);
+        streaming.add(insurrection);
+        streaming.add(intoDarkness);
 
         streaming.add(bruce);
         streaming.add(vitalogy);
