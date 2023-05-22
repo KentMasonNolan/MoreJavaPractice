@@ -1,60 +1,66 @@
+// This is an abstract class representing digital content.
+// It implements the Comparable interface for comparing digital content based on title.
+// It provides methods to get and set the title, publisher, and release date of the digital content.
+// It also provides a method to check if the digital content matches a given query.
+
 package Assignment2;
 
-import java.util.ArrayList;
 
-
-public abstract class DigitalContent implements Comparable<DigitalContent>{
-
-
+public abstract class DigitalContent implements Comparable<DigitalContent> {
     private String title;
     private String publisher;
     private String released;
 
-
+    // Constructs a DigitalContent object with the given title, publisher, and release date.
     public DigitalContent(String title, String publisher, String released) {
         this.title = title;
         this.publisher = publisher;
         this.released = released;
     }
 
-
-    public void setTitle(String title)
-    {
+    // Sets the title of the digital content.
+    public void setTitle(String title) {
         this.title = title;
     }
 
+    // Sets the publisher of the digital content.
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
 
+    // Sets the release date of the digital content.
     public void setReleased(String released) {
         this.released = released;
     }
 
-    // getters
+    // Returns the title of the digital content.
     public String getTitle() {
         return title;
     }
 
+    // Returns the publisher of the digital content.
     public String getPublisher() {
         return publisher;
     }
 
+    // Returns the release date of the digital content.
     public String getReleased() {
         return released;
     }
 
-
+    // Returns a string representation of the digital content.
     public String toString() {
-        return "Title: "+title +" Publisher: "+publisher+ " Released: " + released;
+        return "Title: " + title + " Publisher: " + publisher + " Released: " + released;
     }
 
-    public boolean match(String query){
+    // Checks if the digital content matches the given query.
+    public boolean match(String query) {
         return title.toLowerCase().contains(query.toLowerCase()) || publisher.toLowerCase().contains(query.toLowerCase())
                 || released.toLowerCase().contains(query.toLowerCase());
     }
 
-    public int compareTo(DigitalContent content){
+    // Compares the digital content with another digital content based on title.
+    public int compareTo(DigitalContent content) {
         return title.compareTo(content.title);
     }
 }
