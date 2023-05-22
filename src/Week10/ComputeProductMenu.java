@@ -31,18 +31,21 @@ public class ComputeProductMenu {
 
         while (true) {
             System.out.println("Please select from the following:");
-            System.out.println("1. Compute product");
-            System.out.println("2. Quit");
 
-            int menu = input.nextInt();
+
 
             try {
+                System.out.println("1. Compute product");
+                System.out.println("2. Quit");
+                int menu = input.nextInt();
+
                 switch (menu){
                     case 1:
-                        System.out.println("1");
+                        product();
                         break;
                     case 2:
                         System.out.println("2");
+                        System.exit(0);
                         break;
                     default:
                         System.out.println("default");
@@ -51,7 +54,7 @@ public class ComputeProductMenu {
             } catch (InputMismatchException inputMismatchException){
                 System.out.println("You must input integer values");
                 System.err.println("Exceptional event: "+inputMismatchException);
-                input.next();//remove bad input from the scanner.
+                input.next();
             }
 
 
