@@ -3,7 +3,7 @@ package Assignment2;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class AssignmentDemo {
+public class Client {
 
     // Method to output the query result from the streaming service
     public static void outputQueryResult(StreamingService streaming, String query) {
