@@ -36,11 +36,13 @@ public class AssignmentDemo {
 
 
         // Creating music objects
-        Music bruce = new Music("Born in the USA", "Bruce Springsteen", "1984", "Bruce Springsteen");
-        Music vitalogy = new Music("Vitalogy", "Sony", "1994", "Pearl Jam");
-        Music ten = new Music("Ten", "Sony", "1991", "Pearl Jam");
-        Music elton = new Music("Goodbye Yellow Brick Road", "This", "1973", "Elton John");
-        Music weezer = new Music("Weezer", "DGC Records", "1994", "Weezer");
+
+        Music nofx = new Music("The Decline", "NOFX", "1999", "NOFX");
+        Music refused = new Music("The Shape of Punk to Come", "Burning Heart Records", "1998", "Refused");
+        Music riseAgainst = new Music("The Sufferer & the Witness", "Geffen Records", "2006", "Rise Against");
+        Music theBronx = new Music("The Bronx", "White Drugs", "2003", "The Bronx");
+        Music timeOfOurLives = new Music("The Time of Our Lives", "Hollywood Records", "2009", "Miley Cyrus");
+
 
         StreamingService streaming = new StreamingService();
 
@@ -52,16 +54,16 @@ public class AssignmentDemo {
         streaming.add(insurrection);
         streaming.add(intoDarkness);
 
-        streaming.add(bruce);
-        streaming.add(vitalogy);
-        streaming.add(elton);
-        streaming.add(weezer);
-        streaming.add(ten);
+        streaming.add(nofx);
+        streaming.add(refused);
+        streaming.add(riseAgainst);
+        streaming.add(theBronx);
+        streaming.add(timeOfOurLives);
 
         // Outputting query results
-        outputQueryResult(streaming, "orson");
-        outputQueryResult(streaming, "pearl jam");
-        outputQueryResult(streaming, "Bruce");
-        outputQueryResult(streaming, "194");
+        outputQueryResult(streaming, "punk");
+        outputQueryResult(streaming, "refused");
+        outputQueryResult(streaming, "drugs");
+        outputQueryResult(streaming, "2003");
     }
 }
