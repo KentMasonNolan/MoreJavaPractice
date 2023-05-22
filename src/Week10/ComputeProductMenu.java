@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class ComputeProductMenu {
 
-    private static Scanner input;
 
 
     public static void product() throws InputMismatchException {
+        Scanner input = new Scanner(System.in);
         try {
             System.out.println("Welcome to the calculator.");
             System.out.println("Enter first number:");
@@ -24,7 +24,7 @@ public class ComputeProductMenu {
     }
 
     public static void main(String[] args) {
-
+        Scanner input = new Scanner(System.in);
 
         System.out.println("Welcome to the calculator.");
 
