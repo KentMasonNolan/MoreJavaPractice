@@ -52,8 +52,8 @@ public class ComputeProductMenu {
                         break;
                 }
             } catch (InputMismatchException inputMismatchException){
-                System.out.println("You must input integer values");
-                System.err.println("Exceptional event: "+inputMismatchException);
+                System.out.println("\n\nYou must input integer values");
+                System.out.println("Exceptional event: "+inputMismatchException+ "\n");
                 input.next();
             }
 
