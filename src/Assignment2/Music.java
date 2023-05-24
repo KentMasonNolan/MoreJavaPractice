@@ -23,6 +23,7 @@ public class Music extends DigitalContent {
     public Music(String title, String publisher, String released, String artist) {
         super(title, publisher, released);
         this.artist = artist;
+        this.currentlyStreamed = false;
     }
 
     // Sets the artist of the music.

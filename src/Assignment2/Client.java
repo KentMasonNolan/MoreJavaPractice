@@ -33,25 +33,26 @@ public class Client implements Play {
         System.out.println("----------------------------------------");
         ArrayList matches = streaming.match(query);
         System.out.println("Matching query: \"" + query + "\"");
-        streaming.match("Orson");
         Collections.sort(matches);
         for (Object dc : matches) {
+
             System.out.println(dc);
         }
         System.out.println("Total of: " + matches.size() + " matches");
         System.out.println("----------------------------------------");
+
+
+
+
     }
 
-    @Override
     public DigitalContent getCurrentStream() {
         return null;
     }
 
-    @Override
     public void stream(String query) {
     }
 
-    @Override
     public void stop() {
     }
 

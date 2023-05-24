@@ -23,6 +23,7 @@ public class Film extends DigitalContent {
     public Film(String title, String publisher, String released, String cast) {
         super(title, publisher, released);
         this.cast = cast;
+        this.currentlyStreamed = false;
     }
 
     // Sets the cast of the film.

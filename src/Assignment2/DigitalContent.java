@@ -15,7 +15,7 @@ public abstract class DigitalContent implements Comparable<DigitalContent> {
     private String publisher;
     private String released;
 
-    private boolean currentlyStreamed;
+    public boolean currentlyStreamed;
 
 
     public boolean isCurrentlyStreamed() {
@@ -72,7 +72,7 @@ public abstract class DigitalContent implements Comparable<DigitalContent> {
 
     // Returns a string representation of the digital content.
     public String toString() {
-        return "Title: " + title + " Publisher: " + publisher + " Released: " + released;
+        return "Title: " + title + " Publisher: " + publisher + " Released: " + released + " Now streaming? " + String.valueOf(currentlyStreamed);
     }
 
     // Checks if the digital content matches the given query.
