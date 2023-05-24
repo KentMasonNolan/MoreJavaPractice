@@ -37,6 +37,18 @@ public class Client {
         System.out.println("----------------------------------------");
     }
 
+    public DigitalContent getCurrentStream(){
+        return null;
+    }
+
+    public void stop(){
+
+    }
+
+    public void stream(String query){
+
+    }
+
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);

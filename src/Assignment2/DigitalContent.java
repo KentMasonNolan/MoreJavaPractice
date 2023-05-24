@@ -21,6 +21,10 @@ public abstract class DigitalContent implements Comparable<DigitalContent> {
     private String publisher;
     private String released;
 
+    private boolean playingCurrently;
+
+
+
     // Constructs a DigitalContent object with the given title, publisher, and release date.
     public DigitalContent(String title, String publisher, String released) {
         this.title = title;
