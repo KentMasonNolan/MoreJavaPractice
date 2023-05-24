@@ -2,6 +2,8 @@ package Assignment2;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Client {
 
@@ -21,6 +23,8 @@ public class Client {
     }
 
     public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
 
         System.out.println("Welcome to the Streaming Service");
 
@@ -60,10 +64,57 @@ public class Client {
         streaming.add(theBronx);
         streaming.add(timeOfOurLives);
 
+
+
+        while (true) {
+            System.out.println("Please select from the following:\n");
+
+
+
+            try {
+                System.out.println("A. Display Digital Content library");
+                System.out.println("B. Display currently streaming DigitalContent");
+                System.out.println("C. Match Digital Content to Stream");
+                System.out.println("D. Stop streaming");
+                System.out.println("E. Quit Client Application");
+
+                String menu = String.valueOf(input.nextLine().charAt(0)).toLowerCase();
+
+                switch (menu){
+                    case "a":
+                        System.out.println("A");
+                        break;
+                    case "b":
+                        System.out.println("B");
+                        break;
+                    case "c":
+                        System.out.println("C");
+                        break;
+                    case "d":
+                        System.out.println("D");
+                        break;
+                    case "e":
+                        System.out.println("Peace out");
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("default");
+                        break;
+                }
+            } catch (InputMismatchException inputMismatchException){
+                System.out.println("\n\nYou must input integer values");
+                System.out.println("Exceptional event: "+inputMismatchException+ "\n");
+                input.next();
+            }
+
+
+        }
+
+
         // Outputting query results
-        outputQueryResult(streaming, "punk");
-        outputQueryResult(streaming, "refused");
-        outputQueryResult(streaming, "drugs");
-        outputQueryResult(streaming, "2003");
+//        outputQueryResult(streaming, "punk");
+//        outputQueryResult(streaming, "refused");
+//        outputQueryResult(streaming, "drugs");
+//        outputQueryResult(streaming, "2003");
     }
 }
