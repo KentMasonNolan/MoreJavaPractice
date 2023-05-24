@@ -15,14 +15,17 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 interface Play {
-    public DigitalContent getCurrentStream();
+    DigitalContent getCurrentStream();
 
-    public void stream(String query);
+    void stream(String query);
 
-    public void stop();
+    void stop();
 }
 
 public class Client implements Play {
+
+
+    Client c1 = new Client();
 
     // Method to output the query result from the streaming service
     public static void outputQueryResult(StreamingService streaming, String query) {
@@ -46,12 +49,10 @@ public class Client implements Play {
 
     @Override
     public void stream(String query) {
-
     }
 
     @Override
     public void stop() {
-
     }
 
     public static void main(String[] args) {
