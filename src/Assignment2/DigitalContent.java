@@ -1,7 +1,17 @@
-// This is an abstract class representing digital content.
-// It implements the Comparable interface for comparing digital content based on title.
-// It provides methods to get and set the title, publisher, and release date of the digital content.
-// It also provides a method to check if the digital content matches a given query.
+/***
+
+ *
+
+ * Student Name Kent Nolan
+
+ * Student ID 20119784
+
+ * Course Code ENSE 602
+
+ * Assessment Item (Assessment B)
+
+ *
+ **/
 
 package Assignment2;
 
