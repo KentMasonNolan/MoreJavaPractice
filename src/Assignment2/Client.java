@@ -25,7 +25,6 @@ interface Play {
 public class Client implements Play {
 
 
-    Client c1 = new Client();
 
     // Method to output the query result from the streaming service
     public static void outputQueryResult(StreamingService streaming, String query) {
@@ -50,8 +49,7 @@ public class Client implements Play {
     public void stream(String query) {
     }
 
-    public void stop() {
-    }
+
 
     public static void main(String[] args) {
 
@@ -126,6 +124,11 @@ public class Client implements Play {
                         break;
                     case "d":
                         System.out.println("D");
+
+                        for (Object dc : streaming.content) {
+                            ;
+                        }
+
                         break;
                     case "e":
                         System.out.println("Peace out");
@@ -144,6 +147,9 @@ public class Client implements Play {
 
         }
 
+
+    }
+    public void stop() {
 
     }
 
