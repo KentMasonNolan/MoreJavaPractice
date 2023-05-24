@@ -1,15 +1,9 @@
 /***
-
  *
-
  * Student Name Kent Nolan
-
  * Student ID 20119784
-
  * Course Code ENSE 602
-
  * Assessment Item (Assessment B)
-
  *
  **/
 
@@ -20,7 +14,15 @@ import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Client {
+interface Play {
+    public DigitalContent getCurrentStream();
+
+    public void stream(String query);
+
+    public void stop();
+}
+
+public class Client implements Play {
 
     // Method to output the query result from the streaming service
     public static void outputQueryResult(StreamingService streaming, String query) {
@@ -37,15 +39,18 @@ public class Client {
         System.out.println("----------------------------------------");
     }
 
-    public DigitalContent getCurrentStream(){
+    @Override
+    public DigitalContent getCurrentStream() {
         return null;
     }
 
-    public void stop(){
+    @Override
+    public void stream(String query) {
 
     }
 
-    public void stream(String query){
+    @Override
+    public void stop() {
 
     }
 
@@ -63,7 +68,6 @@ public class Client {
         Film firstContact = new Film("Star Trek: First Contact", "Paramount Pictures", "1996", "Patrick Stewart, Jonathan Frakes");
         Film insurrection = new Film("Star Trek: Insurrection", "Paramount Pictures", "1998", "Patrick Stewart, Jonathan Frakes");
         Film intoDarkness = new Film("Star Trek Into Darkness", "Paramount Pictures", "2013", "Chris Pine, Zachary Quinto");
-
 
 
         // Creating music objects
@@ -92,10 +96,8 @@ public class Client {
         streaming.add(timeOfOurLives);
 
 
-
         while (true) {
             System.out.println("Please select from the following:\n");
-
 
 
             try {
@@ -107,7 +109,7 @@ public class Client {
 
                 String menu = String.valueOf(input.nextLine().charAt(0)).toLowerCase();
 
-                switch (menu){
+                switch (menu) {
                     case "a":
                         System.out.println("A");
                         for (Object dc : streaming.content) {
@@ -134,9 +136,9 @@ public class Client {
                         System.out.println("Your input was not a valid option. Please try again or \"E\" to quit");
                         break;
                 }
-            } catch (InputMismatchException inputMismatchException){
+            } catch (InputMismatchException inputMismatchException) {
                 System.out.println("\n\nYou must input integer values");
-                System.out.println("Exceptional event: "+inputMismatchException+ "\n");
+                System.out.println("Exceptional event: " + inputMismatchException + "\n");
                 input.next();
             }
 
@@ -144,10 +146,7 @@ public class Client {
         }
 
 
-        // Outputting query results
-//        outputQueryResult(streaming, "punk");
-//        outputQueryResult(streaming, "refused");
-//        outputQueryResult(streaming, "drugs");
-//        outputQueryResult(streaming, "2003");
     }
+
+
 }
