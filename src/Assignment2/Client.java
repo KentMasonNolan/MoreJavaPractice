@@ -83,12 +83,18 @@ public class Client {
                 switch (menu){
                     case "a":
                         System.out.println("A");
+                        for (Object dc : streaming) {
+                            System.out.println(dc);
+                        }
                         break;
                     case "b":
                         System.out.println("B");
                         break;
                     case "c":
-                        System.out.println("C");
+                        System.out.println("Please type what you would like to play");
+                        String selection = input.nextLine();
+                        outputQueryResult(streaming, selection);
+                        System.out.println("Now playing");
                         break;
                     case "d":
                         System.out.println("D");
