@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class StreamingService {
 
-    private ArrayList<DigitalContent> content;
+    public ArrayList<DigitalContent> content;
 
     // Constructs a StreamingService object with an empty list of digital content.
     public StreamingService() {
@@ -13,6 +13,7 @@ public class StreamingService {
 
     // Adds a digital content item to the streaming service.
     public void add(DigitalContent item) {
+
         content.add(item);
     }
 

@@ -83,7 +83,7 @@ public class Client {
                 switch (menu){
                     case "a":
                         System.out.println("A");
-                        for (Object dc : streaming) {
+                        for (Object dc : streaming.content) {
                             System.out.println(dc);
                         }
                         break;
@@ -104,7 +104,7 @@ public class Client {
                         System.exit(0);
                         break;
                     default:
-                        System.out.println("default");
+                        System.out.println("Your input was not a valid option. Please try again or \"E\" to quit");
                         break;
                 }
             } catch (InputMismatchException inputMismatchException){
