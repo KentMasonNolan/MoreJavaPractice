@@ -41,9 +41,6 @@ public class Client implements Play {
         System.out.println("Total of: " + matches.size() + " matches");
         System.out.println("----------------------------------------");
 
-
-
-
     }
 
     public DigitalContent getCurrentStream() {
