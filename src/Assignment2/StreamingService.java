@@ -38,12 +38,13 @@ public class StreamingService {
         int flag = 0;
 
         for (DigitalContent dc : content) {
-            if (dc.match(query))
+            if (dc.match(query)) {
                 if (flag == 0) {
                     flag++;
                     dc.currentlyStreamed = true;
                 }
-            matchedItems.add(dc);
+                matchedItems.add(dc);
+            }
         }
 
         return matchedItems;
