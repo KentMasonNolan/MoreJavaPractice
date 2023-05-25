@@ -14,14 +14,6 @@ import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-interface Play {
-    DigitalContent getCurrentStream();
-
-    void stream(String query);
-
-    void stop();
-}
-
 public class Client implements Play {
 
     public StreamingService streaming = new StreamingService();
