@@ -24,10 +24,11 @@ interface Play {
 
 public class Client implements Play {
 
+    public StreamingService streaming = new StreamingService();
 
 
     // Method to output the query result from the streaming service
-    public static void outputQueryResult(StreamingService streaming, String query) {
+    public static void stream(StreamingService streaming, String query) {
 
         System.out.println("----------------------------------------");
         ArrayList matches = streaming.match(query);
@@ -45,19 +46,27 @@ public class Client implements Play {
 
     @Override
     public DigitalContent getCurrentStream() {
+        for (int i = 0; i < streaming.content.size(); i++) {
+            if (streaming.content.get(i).currentlyStreamed) {
+                return streaming.content.get(i);
+            }
+        }
         return null;
     }
 
+
+
+
     @Override
     public void stream(String query) {
-
+        stream(streaming, query);
     }
-
 
 
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+        Client c1 = new Client();
 
         System.out.println("Welcome to the Streaming Service");
 
@@ -82,18 +91,18 @@ public class Client implements Play {
         StreamingService streaming = new StreamingService();
 
         // Adding films and music to the streaming service
-        streaming.add(theWrathofKhan);
-        streaming.add(theSearchforSpock);
-        streaming.add(generations);
-        streaming.add(firstContact);
-        streaming.add(insurrection);
-        streaming.add(intoDarkness);
+        c1.streaming.add(theWrathofKhan);
+        c1.streaming.add(theSearchforSpock);
+        c1.streaming.add(generations);
+        c1.streaming.add(firstContact);
+        c1.streaming.add(insurrection);
+        c1.streaming.add(intoDarkness);
 
-        streaming.add(nofx);
-        streaming.add(refused);
-        streaming.add(riseAgainst);
-        streaming.add(theBronx);
-        streaming.add(timeOfOurLives);
+        c1.streaming.add(nofx);
+        c1.streaming.add(refused);
+        c1.streaming.add(riseAgainst);
+        c1.streaming.add(theBronx);
+        c1.streaming.add(timeOfOurLives);
 
 
         while (true) {
@@ -112,31 +121,26 @@ public class Client implements Play {
                 switch (menu) {
                     case "a":
                         System.out.println("A");
-                        for (Object dc : streaming.content) {
+                        for (Object dc : c1.streaming.content) {
                             System.out.println(dc);
                         }
                         break;
-                    case "b":
-                        {
-                            for (int i = 0; i < streaming.content.size(); i++) {
-                                if (streaming.content.get(i).currentlyStreamed){
-                                    System.out.println(streaming.content.get(i));
-                                }
+                    case "b": {
+                        for (int i = 0; i < c1.streaming.content.size(); i++) {
+                            if (c1.streaming.content.get(i).currentlyStreamed) {
+                                System.out.println(c1.streaming.content.get(i));
                             }
                         }
-                        break;
+                    }
+                    break;
                     case "c":
                         System.out.println("Please type what you would like to play");
                         String selection = input.nextLine();
-                        outputQueryResult(streaming, selection);
+                        stream(c1.streaming, selection);
                         System.out.println("Now playing");
                         break;
                     case "d":
-                        for (int i = 0; i < streaming.content.size(); i++) {
-                            if (streaming.content.get(i).currentlyStreamed){
-                                streaming.content.get(i).currentlyStreamed = false;
-                            }
-                        }
+                        c1.stop();
                         break;
                     case "e":
                         System.out.println("Peace out");
@@ -157,11 +161,14 @@ public class Client implements Play {
 
 
     }
+
     public void stop() {
+        for (int i = 0; i < streaming.content.size(); i++) {
+            if (streaming.content.get(i).currentlyStreamed) {
+                streaming.content.get(i).currentlyStreamed = false;
+            }
+        }
+
 
     }
-
-
-
-
 }
