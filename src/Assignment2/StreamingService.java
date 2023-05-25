@@ -35,10 +35,15 @@ public class StreamingService {
     // Returns an ArrayList of digital content items that match the given query.
     public ArrayList match(String query) {
         ArrayList<DigitalContent> matchedItems = new ArrayList<>();
+        int flag = 0;
 
         for (DigitalContent dc : content) {
             if (dc.match(query))
-                matchedItems.add(dc);
+                if (flag == 0) {
+                    flag++;
+                    dc.currentlyStreamed = true;
+                }
+            matchedItems.add(dc);
         }
 
         return matchedItems;
