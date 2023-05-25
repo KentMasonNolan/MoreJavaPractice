@@ -20,10 +20,12 @@ import java.util.ArrayList;
 public class StreamingService {
 
     public ArrayList<DigitalContent> content;
+    public ArrayList<DigitalContent> streaming;
 
     // Constructs a StreamingService object with an empty list of digital content.
     public StreamingService() {
         content = new ArrayList<>();
+        streaming = new ArrayList<>();
     }
 
     // Adds a digital content item to the streaming service.

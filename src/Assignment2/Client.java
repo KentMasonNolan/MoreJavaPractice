@@ -48,7 +48,9 @@ public class Client implements Play {
         return null;
     }
 
+    @Override
     public void stream(String query) {
+
     }
 
 
@@ -78,7 +80,6 @@ public class Client implements Play {
         Music timeOfOurLives = new Music("The Time of Our Lives", "Hollywood Records", "2009", "Miley Cyrus");
 
         StreamingService streaming = new StreamingService();
-
 
         // Adding films and music to the streaming service
         streaming.add(theWrathofKhan);
@@ -117,10 +118,12 @@ public class Client implements Play {
                         break;
                     case "b":
                         {
-                        for (Object dc : streaming.content) {
-                            System.out.println(" ");
+                            for (int i = 0; i < streaming.content.size(); i++) {
+                                if (streaming.content.get(i).currentlyStreamed){
+                                    System.out.println(streaming.content.get(i));
+                                }
+                            }
                         }
-                    }
                         break;
                     case "c":
                         System.out.println("Please type what you would like to play");
@@ -129,12 +132,11 @@ public class Client implements Play {
                         System.out.println("Now playing");
                         break;
                     case "d":
-                        System.out.println("D");
-
-                        for (Object dc : streaming.content) {
-                            ;
+                        for (int i = 0; i < streaming.content.size(); i++) {
+                            if (streaming.content.get(i).currentlyStreamed){
+                                streaming.content.get(i).currentlyStreamed = false;
+                            }
                         }
-
                         break;
                     case "e":
                         System.out.println("Peace out");
