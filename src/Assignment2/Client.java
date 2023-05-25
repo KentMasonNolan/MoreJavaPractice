@@ -42,6 +42,8 @@ public class Client implements Play {
 
     }
 
+
+    @Override
     public DigitalContent getCurrentStream() {
         return null;
     }
@@ -75,8 +77,8 @@ public class Client implements Play {
         Music theBronx = new Music("The Bronx", "White Drugs", "2003", "The Bronx");
         Music timeOfOurLives = new Music("The Time of Our Lives", "Hollywood Records", "2009", "Miley Cyrus");
 
-
         StreamingService streaming = new StreamingService();
+
 
         // Adding films and music to the streaming service
         streaming.add(theWrathofKhan);
@@ -114,7 +116,11 @@ public class Client implements Play {
                         }
                         break;
                     case "b":
-                        System.out.println("B");
+                        {
+                        for (Object dc : streaming.content) {
+                            System.out.println(" ");
+                        }
+                    }
                         break;
                     case "c":
                         System.out.println("Please type what you would like to play");
@@ -152,6 +158,8 @@ public class Client implements Play {
     public void stop() {
 
     }
+
+
 
 
 }

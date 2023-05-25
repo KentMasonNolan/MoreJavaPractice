@@ -28,8 +28,9 @@ public class StreamingService {
 
     // Adds a digital content item to the streaming service.
     public void add(DigitalContent item) {
-
-        content.add(item);
+        if (item != null) {
+            content.add(item);
+        }
     }
 
     // Returns an ArrayList of digital content items that match the given query.
