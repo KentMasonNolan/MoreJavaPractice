@@ -1,15 +1,9 @@
 /***
-
  *
-
  * Student Name Kent Nolan
-
  * Student ID 20119784
-
  * Course Code ENSE 602
-
  * Assessment Item (Assessment B)
-
  *
  **/
 

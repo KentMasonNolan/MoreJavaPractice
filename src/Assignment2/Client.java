@@ -37,7 +37,7 @@ public class Client implements Play {
 
             System.out.println(dc);
         }
-        if (matches.size() == 0){
+        if (matches.size() == 0) {
             System.out.println("Sorry, nothing was found.");
         }
         System.out.println("Total of: " + matches.size() + " matches \n");
@@ -54,8 +54,6 @@ public class Client implements Play {
         }
         return null;
     }
-
-
 
 
     @Override
