@@ -30,7 +30,6 @@ public class Client implements Play {
     // Method to output the query result from the streaming service
     public static void stream(StreamingService streaming, String query) {
 
-        System.out.println("----------------------------------------");
         ArrayList matches = streaming.match(query);
         System.out.println("Matching query: \"" + query + "\"");
         Collections.sort(matches);
@@ -38,8 +37,10 @@ public class Client implements Play {
 
             System.out.println(dc);
         }
-        System.out.println("Total of: " + matches.size() + " matches");
-        System.out.println("----------------------------------------");
+        if (matches.size() == 0){
+            System.out.println("Sorry, nothing was found.");
+        }
+        System.out.println("Total of: " + matches.size() + " matches \n");
 
     }
 
@@ -126,18 +127,20 @@ public class Client implements Play {
                         }
                         break;
                     case "b": {
+                        c1.getCurrentStream();
+                        String output = "Nothing is currently playing\n";
                         for (int i = 0; i < c1.streaming.content.size(); i++) {
                             if (c1.streaming.content.get(i).currentlyStreamed) {
-                                System.out.println(c1.streaming.content.get(i));
+                                output = c1.streaming.content.get(i).toString();
                             }
                         }
+                        System.out.println(output);
                     }
                     break;
                     case "c":
                         System.out.println("Please type what you would like to play");
                         String selection = input.nextLine();
                         stream(c1.streaming, selection);
-                        System.out.println("Now playing");
                         break;
                     case "d":
                         c1.stop();
