@@ -1,3 +1,12 @@
+/***
+ *
+ * Student Name Kent Nolan
+ * Student ID 20119784
+ * Course Code ENSE 602
+ * Assessment Item (Assessment B)
+ *
+ **/
+
 package Assignment2;
 
 public class Film extends DigitalContent {
@@ -8,6 +17,7 @@ public class Film extends DigitalContent {
     public Film(String title, String publisher, String released, String cast) {
         super(title, publisher, released);
         this.cast = cast;
+        this.currentlyStreamed = false;
     }
 
     // Sets the cast of the film.

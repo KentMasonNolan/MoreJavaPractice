@@ -1,3 +1,12 @@
+/***
+ *
+ * Student Name Kent Nolan
+ * Student ID 20119784
+ * Course Code ENSE 602
+ * Assessment Item (Assessment B)
+ *
+ **/
+
 package Assignment2;
 
 public class Music extends DigitalContent {
@@ -8,6 +17,7 @@ public class Music extends DigitalContent {
     public Music(String title, String publisher, String released, String artist) {
         super(title, publisher, released);
         this.artist = artist;
+        this.currentlyStreamed = false;
     }
 
     // Sets the artist of the music.
