@@ -1,4 +1,4 @@
-package Exam_Pracw4;
+package Exam_PracW4;
 
 public class Book {
 
