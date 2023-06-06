@@ -29,12 +29,30 @@ public class StringCompute {
         return count;
     }
 
-//    public boolean hasOnlyDigits(){
-//       if (Character.isDigit()
-//        }
-//
-//        return false;
-//    }
+    public boolean hasOnlyDigits() {
+
+        char[] chars = this.str.toCharArray();
+        for (char c : chars) {
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean isPalindrome(){
+        for (int i = 0; i < this.str.length()/2; i++) {
+            if (this.str.charAt(i) != this.str.charAt(this.str.length()-i-1)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return  str ;
+    }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -47,7 +65,9 @@ public class StringCompute {
 
         System.out.println("Your string is: " + str1);
         System.out.println("We will now check how many letter 'a's are in the string. There are: " + str1.countOccurances('a') + "a's in the string");
-//        System.out.println("Now we will check if the string contains any digits. Computer, are there any digits? " + hasOnlyDigits());
+        System.out.println("Now we will check if the string contains any digits. Computer, are there any digits? " + str1.hasOnlyDigits());
+
+        System.out.println("Now we will check if your string is a Palindrome" + "Is it a Palindrome? " + str1.isPalindrome());
 
 
 
