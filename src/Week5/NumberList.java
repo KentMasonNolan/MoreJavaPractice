@@ -132,6 +132,39 @@ public class NumberList {
         return new_num_list;
     }
 
+    public String frequencies(int[] input){
+        int[] count = new int[10];
+        for (int item : input){
+            count[item]++;
+        }
+        String output = "";
+
+        for (int i = 0; i < count.length; i++) {
+            if (count[i] != 0){
+                output += (i) + ": Has the frequency " + count[i] + "\n";
+            }
+        }
+        return output;
+    }
+
+    public char[] underScore(String input, int p){
+
+        char[] output = new char[input.length()*(p+1)];
+        String[] stringArray = input.strip().split("");
+        int position = 0;
+
+        for (int i = 0; i < output.length; i++) {
+            output[i] = input.charAt(position);
+            position++;
+            for (int j = 1; j < p+1; j++) {
+                output[i+j] = '_';
+            }i+=p;
+        }
+        return output;
+    }
+
+
+
 
     public static void main(String[] args) {
 
