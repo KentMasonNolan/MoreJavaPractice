@@ -20,7 +20,7 @@ public class AnimalApplication {
 
             switch (menu) {
                 case 1:
-                    animalList[animalCount] = new Cat();
+                    animalList[animalCount] = new DomesticCat();
                     animalCount++;
                     break;
                 case 2:
