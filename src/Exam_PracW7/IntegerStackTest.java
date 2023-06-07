@@ -6,9 +6,6 @@ import java.util.Scanner;
 public class IntegerStackTest {
 
 
-
-
-
     public static void main(String[] args) {
 
         ArrayList integerStack = new ArrayList();
@@ -23,5 +20,12 @@ public class IntegerStackTest {
         System.out.println(integerStack);
 
         System.out.println("Now we will reverse it: ");
+
+        String output = "";
+        for (int i = integerStack.size()-1; i >= 0 ; i--) {
+            output += integerStack.get(i).toString();
+            output += ", ";
+        } System.out.println(output);
+
     }
 }
