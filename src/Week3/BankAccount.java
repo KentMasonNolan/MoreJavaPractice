@@ -4,33 +4,41 @@ import java.util.Scanner;
 
 public class BankAccount {
 
-    String firstname;
-    String lastname;
-    Double balance;
+   private String firstname;
+   private String lastname;
+   private Double balance;
+   int numberOfTransactions = 0;
+   private String pin;
 
-
-    public BankAccount(String firstname, String lastname) {
+    public BankAccount(String firstname, String lastname, String pin) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.balance = 0.0;
+        this.pin = pin;
 
     }
 
     public void Deposit(double depositAmount) {
         if (depositAmount > 0) {
             balance = balance + depositAmount;
+            this.numberOfTransactions++;
         } else {
             System.out.println("Please insert a non-negative amount");
         }
     }
 
     public void Borrow(double borrowAmount){
+
         balance=balance-(borrowAmount*1.1);
+        this.numberOfTransactions++;
+
     }
 
     public void Withdraw(double withdrawAmount){
         if (balance > withdrawAmount){
             balance = balance-withdrawAmount;
+            this.numberOfTransactions++;
+
         }
         else{
             System.out.println("You are trying to withdraw more than your balance. Please try again.");
@@ -48,7 +56,13 @@ public class BankAccount {
         System.out.println("Please tell me your second name: ");
         String lastname = input.nextLine();
 
-        BankAccount b1 = new BankAccount(firstname, lastname);
+        System.out.println("Please set your pin: ");
+        String pin = String.valueOf(input.nextInt());
+
+        BankAccount b1 = new BankAccount(firstname, lastname, pin);
+        System.out.println(b1.pin);
+        BankAccount b2 = new BankAccount("bob", "nolan", "0000");
+        System.out.println(b2.pin);
 
         System.out.println("We have created your account Nolan Banking. Your current balance is: $" + b1.balance);
 
