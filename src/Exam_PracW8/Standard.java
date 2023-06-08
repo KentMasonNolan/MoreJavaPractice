@@ -1,11 +1,12 @@
 package Exam_PracW8;
 
+
 public class Standard {
 
-    private int nMinsTalked;
+    protected int nMinsTalked;
     private final int nMinsLimit;
     private final int nTextLimit;
-    private int nTextSent;
+    protected int nTextSent;
 
     public Standard(int nMinsTalked, int nTextSent) {
         this.nMinsTalked = nMinsTalked;
@@ -32,5 +33,11 @@ public class Standard {
         }
     }
 
+    public double billing(){
+        double output = 0.0;
+        output += this.nMinsTalked * 0.1;
+        output += this.nTextSent * 0.05;
+        return output;
+    }
 
 }

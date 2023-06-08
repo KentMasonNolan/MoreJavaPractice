@@ -13,6 +13,11 @@ public class MobileData extends Standard {
         this.nDataLimit = 100;
     }
 
+    @Override
+    public double billing() {
+        return (super.billing() + this.nDataRecieved*0.15);
+    }
+
     public void transfer(int n) {
         if (this.nDataRecieved + n > this.nDataLimit) {
             System.out.println("You have no data remaining.");

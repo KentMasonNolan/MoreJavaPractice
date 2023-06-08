@@ -10,4 +10,13 @@ class DataHeavy extends MobileData {
         // No limit on data transfers
         this.nDataRecieved += n;
     }
+
+    @Override
+    public double billing() {
+        double output = 0.0;
+        output += this.nDataRecieved*0.25;
+        output += this.nMinsTalked*0.10;
+
+        return output;
+    }
 }
