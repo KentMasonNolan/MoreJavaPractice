@@ -1,0 +1,23 @@
+package Exam_PracW8;
+
+import java.util.Date;
+
+public class MobileData extends Standard {
+
+    public int nDataRecieved;
+    private int nDataLimit;
+
+    public MobileData(int nMinsTalked, int nTextSent, int nDataRecieved) {
+        super(nMinsTalked, nTextSent);
+        this.nDataRecieved = nDataRecieved;
+        this.nDataLimit = 100;
+    }
+
+    public void transfer(int n) {
+        if (this.nDataRecieved + n > this.nDataLimit) {
+            System.out.println("You have no data remaining.");
+        } else {
+            this.nDataRecieved += nDataRecieved;
+        }
+    }
+}
