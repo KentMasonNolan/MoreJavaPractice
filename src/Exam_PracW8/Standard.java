@@ -3,8 +3,8 @@ package Exam_PracW8;
 public class Standard {
 
     private int nMinsTalked;
-    private int nMinsLimit;
-    private int nTextLimit;
+    private final int nMinsLimit;
+    private final int nTextLimit;
     private int nTextSent;
 
     public Standard(int nMinsTalked, int nTextSent) {

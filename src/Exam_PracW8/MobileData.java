@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class MobileData extends Standard {
 
-    public int nDataRecieved;
-    private int nDataLimit;
+    protected int nDataRecieved;
+    private final int nDataLimit;
 
     public MobileData(int nMinsTalked, int nTextSent, int nDataRecieved) {
         super(nMinsTalked, nTextSent);
